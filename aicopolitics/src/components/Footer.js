@@ -1,10 +1,11 @@
 // Footer.js
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>© 2024 all right reserves to Aico Politics</p>
+    <footer className="footer">
+      <p>© 2022 all right reserve Aico Politics</p>
     </footer>
   );
 };

@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import SearchBar from './components/SearchBar';
 import MenuBar from './components/MenuBar';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutPage from './components/AboutPage';
+import AboutUs from './components/AboutUs';
 import NotFoundPage from './components/NotFoundPage';
 import './App.css';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const categories = ['Politics', 'Business', 'Technology', 'Sports', 'SpaceTech'];
+  const categories = ['Politics', 'Business', 'Travel', 'Banking', 'CryptoTech', 'Technology', 'Sports', 'SpaceTech'];
   const [posts, setPosts] = useState([]); // Assume you have some posts
 
   const handleSearch = (term) => {
@@ -46,7 +49,7 @@ const App = () => {
         <MenuBar categories={categories} />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/posts" element={<Main>{filteredPosts.map(post => (<Post key={post.id} post={post} />))}</Main>} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -57,3 +60,8 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+

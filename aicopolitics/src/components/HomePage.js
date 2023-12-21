@@ -1,14 +1,13 @@
-// Home.js
+// HomePage.js
 import React from 'react';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
-      <h2>Welcome to the Aicopolitics app! This app provides you with up-to-date global news in the fields of politics, business, technology, space tech, and sports. Stay informed about the latest happenings and trends from around the world!
-</h2>
-      {/* Add more content here */}
+      <h1>Welcome to the Home Page</h1>
+      {/* Add more content as needed */}
     </div>
   );
 };
 
-export default Home;
+export default HomePage;

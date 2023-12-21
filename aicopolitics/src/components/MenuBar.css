@@ -1,0 +1,16 @@
+/* MenuBar.css */
+.menu-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.menu-bar a {
+  color: white;
+  text-decoration: underline white wheat;
+}
+
+.menu-bar a:hover {
+  color: #007BFF;
+}

@@ -1,15 +1,15 @@
+// MenuBar.js
+
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './MenuBar.css';
 
-const MenuBar = () => {
-  const categories = ['Politics', 'Business', 'SpaceTech', 'Sports', 'Finance', 'Banking'];
-  
+
+const MenuBar = ({ categories }) => {
   return (
     <div className="menu-bar">
       {categories.map((category, index) => (
-        <div key={index} className="menu-item">
-          {category}
-        </div>
+        <a key={index} href={`/${category.toLowerCase()}`}>{category}</a>
       ))}
     </div>
   );
