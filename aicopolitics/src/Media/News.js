@@ -1,25 +1,34 @@
-// Import necessary modules
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './News.css'; // Import the CSS file
+import './News.css';
 
-// Define the News component
 const News = () => {
-  // Define state variables
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [endOfNews, setEndOfNews] = useState(false);
-  const [page, setPage] = useState(1); // Current page for fetching news
-  const [searchTerm, setSearchTerm] = useState(''); // Search term for filtering news
-  const [sortOrder, setSortOrder] = useState('asc'); // Sort order for sorting news
+  const [page, setPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortOrder, setSortOrder] = useState('asc');
 
-  // Define effect for fetching news
   useEffect(() => {
     const fetchNews = async () => {
-      setLoading(true); // Set loading to true
+      setLoading(true);
       try {
-        const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${page}`);
+        const response = await axios.get(`https://newsapi.org/v2/top-headlines`, {
+          params: {
+            country: 'us',
+            category: 'business',
+            sources: 'source1,source2',
+            q: searchTerm,
+            pageSize: 100,
+            page: page,
+          },
+          headers: {
+            'Authorization': 'b7e1bbb45671499bb0a1c75787f071cd'
+          }
+        });
+
         if (response.data.articles.length > 0) {
           setNews(prevNews => [...prevNews, ...response.data.articles]);
         } else {
@@ -29,43 +38,20 @@ const News = () => {
         setError('Failed to fetch news due to network error');
         console.error('Failed to fetch news due to network error', error);
       }
-      setLoading(false); // Set loading to false
+      setLoading(false);
     };
 
     fetchNews();
-  }, [page]);
+  }, [page, searchTerm]);
 
-  // Define effect for infinite scrolling
-  useEffect(() => {
-    const scrollHandler = (e) => {
-      if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || loading || endOfNews) return;
-      setPage(prevPage => prevPage + 1);
-    };
-
-    window.addEventListener('scroll', scrollHandler);
-    return () => {
-      window.removeEventListener('scroll', scrollHandler);
-    };
-  }, [loading, endOfNews]);
-
-  // Filter articles based on search term
-  const filteredArticles = news.filter(article =>
-    article.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  // Sort articles based on sort order
-  const sortedArticles = [...filteredArticles].sort((a, b) => {
-    const titleA = a.title.toLowerCase();
-    const titleB = b.title.toLowerCase();
-
+  const sortedArticles = [...news].sort((a, b) => {
     if (sortOrder === 'asc') {
-      return titleA > titleB ? 1 : -1;
+      return a.title > b.title ? 1 : -1;
     } else {
-      return titleA < titleB ? 1 : -1;
+      return a.title < b.title ? 1 : -1;
     }
   });
 
-  // Render component
   return (
     <div>
       <input
@@ -80,7 +66,7 @@ const News = () => {
       {loading ? (
         'Loading...'
       ) : error ? (
-        <div>{error}</div>
+        <div> Error: {error}</div>
       ) : (
         sortedArticles.map((article, index) => (
           <div key={index} className="news-item">
@@ -96,4 +82,4 @@ const News = () => {
   );
 };
 
-export default News; // Export News component
+export default News;
