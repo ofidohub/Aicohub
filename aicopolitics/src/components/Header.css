@@ -1,14 +1,41 @@
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:#4D5D53;
+}
 
-  .logo {
-    width: 50px;  /* or any size you want */
-    height: auto;  /* maintain aspect ratio */
-  }
+.header .signup-loin {
+  display: flex;
+  font-size: 20px;
+}
+
+.header .signup-login a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.App-logo {
+  order: 1; /* Position to the left */
+}
+
+.account {
+  order: 2; /* Position in the middle */
+}
+
+.social-icon {
+  order: 3; /* Position to the right */
+}
+
+.header h1 {
+  color: #343a40;
+}
+
+.header nav {
+  margin-top: 20px;
+}

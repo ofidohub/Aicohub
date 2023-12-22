@@ -1,12 +1,13 @@
 // HomePage.js
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+// Import other components...
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      {/* Add more content as needed */}
-    </div>
+    <Routes>
+  
+    </Routes>
   );
 };
 

@@ -1,67 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import SearchBar from './components/SearchBar';
-import MenuBar from './components/MenuBar';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useContext } from 'react';
+import { UserContext } from './account/UserContext'; // Import your UserContext
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AccountPage from './account/AccountPage';
 import AboutUs from './components/AboutUs';
 import NotFoundPage from './components/NotFoundPage';
-import './App.css';
+
+import UserLogin from './account/UserLogin';
+import UserRegister from './account/UserRegister';
+import ForgotPassword from './account/ForgotPassword';
+import ResetPassword from './account/ResetPassword';
+import ChangePassword from './account/ChangePassword';
+import UserProfile from './account/UserProfile';
+import UserDashboard from './account/UserDashboard';
+import Header from './components/Header';
+import Navbar from './components/Navbar'; // Import Navbar
+import Footer from './components/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const categories = ['Politics', 'Business', 'Travel', 'Banking', 'CryptoTech', 'Technology', 'Sports', 'SpaceTech'];
-  const [posts, setPosts] = useState([]); // Assume you have some posts
-
-  const handleSearch = (term) => {
-    setSearchTerm(term);
-  };
-
-  const Post = ({ post }) => {
-    return (
-      <div>
-        <h2>{post.title}</h2>
-        <p>{post.content}</p>
-      </div>
-    );
-  };
-
-  useEffect(() => {
-    // Fetch posts from an API
-    fetch('https://api.example.com/posts')
-      .then(response => response.json())
-      .then(data => setPosts(data))
-      .catch(error => console.error(error));
-  }, []);
-
-  const filteredPosts = posts.filter(post => post.title.includes(searchTerm));
+  const user = useContext(UserContext); // Get user data from UserContext
 
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <SearchBar onSearch={handleSearch} />
-        <MenuBar categories={categories} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/posts" element={<Main>{filteredPosts.map(post => (<Post key={post.id} post={post} />))}</Main>} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <Navbar />
+      
+      <FontAwesomeIcon icon={faFacebook} /> {/* Use FontAwesomeIcon */}
+      <Routes>
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/dashboard" element={<UserDashboard user={user} />} />
+        <Route path="/login" element={<UserLogin />} />
+        <Route path="/register" element={<UserRegister />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/change-password" element={<ChangePassword />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 };
 
 export default App;
-
-
-
-
-

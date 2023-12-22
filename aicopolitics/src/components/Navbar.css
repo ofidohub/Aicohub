@@ -1,12 +1,53 @@
-/* Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    background-color: #f8f8f8;
-  }
-  
-  .navbar a {
-    color: #333;
-    text-decoration: none;
-  }
+  background-color: #333;
+  width: 100vw;
+  margin: 0 auto;
+flex-wrap: wrap;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.navbar nav ul a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.navbar nav ul a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar nav ul a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  margin-left: auto;
+}
+
+.navbar-container {
+  width: 100%; /* Adjust as needed */
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the navbar horizontally */
+  padding: 0 20px; /* Adds some space on the sides */
+}
