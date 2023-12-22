@@ -19,6 +19,8 @@ import Footer from './components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
+import News from './Media/News'; // Import News component
+
 const App = () => {
   const user = useContext(UserContext); // Get user data from UserContext
 
@@ -37,6 +39,7 @@ const App = () => {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/change-password" element={<ChangePassword />} />
         <Route path="/profile" element={<UserProfile />} />
+        <Route path="/news" element={<News />} /> {/* Add route for News */}
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<NotFoundPage />} />
