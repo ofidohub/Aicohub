@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
     "lint": "eslint 'src/**/*.{ts,tsx}'"
   },
   "keywords": [],
@@ -17,5 +16,10 @@
     "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0"
   }
 }
