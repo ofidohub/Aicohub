@@ -1,0 +1,13 @@
+/* UserPage.css */
+.user-page {
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .user-page h1 {
+    color: #333;
+  }
+  
+  .user-page p {
+    color: #666;
+  }

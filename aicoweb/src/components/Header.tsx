@@ -1,14 +1,15 @@
 // Header.tsx
 import React from 'react';
 import './Header.css';
-import UserAccountButton from './account/UserAccountButton';
+
+
+import DropdownMenu from './DropdownMenu';
 
 const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="logo-title">
-        <img src="/logo.png" alt="Logo" className="logo" /> {/* Add this line */}
-        <h1 className="header-title">Aico Hub</h1>
+        <img src="/logo.png" alt="Logo"  /> {/* Add this line */}
       </div>
       <nav className="nav-list">
         <ul>
@@ -23,11 +24,13 @@ const Header: React.FC = () => {
           <li className="nav-item">Finance</li>
         </ul>
       </nav>
-      <UserAccountButton />
+      <nav className="nav">
+        <DropdownMenu />
+     
+       
+      </nav>
     </header>
   );
 };
 
 export default Header;
-
-

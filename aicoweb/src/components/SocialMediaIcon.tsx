@@ -1,8 +1,8 @@
 // SocialMediaIcon.tsx
 import React from 'react';
 import './SocialMediaIcon.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface SocialMediaIconProps {
   icon: IconDefinition;
@@ -12,7 +12,7 @@ interface SocialMediaIconProps {
 const SocialMediaIcon: React.FC<SocialMediaIconProps> = ({ icon, url }) => {
   return (
     <a href={url} className="social-media-icon">
-      <FontAwesomeIcon icon={icon} size="2x" />
+      <FontAwesomeIcon icon={icon} />
     </a>
   );
 };

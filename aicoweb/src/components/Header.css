@@ -1,40 +1,83 @@
 /* Header.css */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  background: #000;
-  color: #fff;
- 
-  grid-template-columns: 1fr auto;
+  background-color: #000;
+  border: 2cqb solid #022D36; /* Adjusted border style */
+  border-radius: 5px;
+  padding: 5px; /* Added padding for better layout */
 }
 
-/* Header.css */
+.header img {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-logo {
+  display: block;
+  margin: 0 auto;
+}
+
 .logo {
-  height: 50px; /* Adjust this value according to your needs */
+  height: 50px;
   margin-right: 10px;
+  width: auto;
+}
+
+.logo-and-text {
+  display: flex;
+  align-items: center;
 }
 
 .logo-title {
   display: flex;
-  align-items: center;
+  align-self: flex-start;
+  position: relative;
 }
 
-.logo {
-  margin-right: 10px;
+.nav {
+  position: relative;
+  align-self: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: wheat;
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  overflow: auto;
+  align-self: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-list ul {
+  display: flex;
 }
 
 .nav-item {
   display: inline-block;
-  padding:  20px;
-  margin-right: 25px; /* Adjust as needed */
+  color: #fff;
+  padding: 20px;
+  font-size: 14px;
+  margin-right: 25px;
   font-family: Arial, sans-serif;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #f00;
 }
