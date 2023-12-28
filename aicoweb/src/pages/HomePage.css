@@ -1,0 +1,78 @@
+/* HomePage.css */
+
+/* Homepage styles */
+.homepage {
+  background-color: #f5f5f5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.homepage .header {
+  /* Add styles for your header here */
+  background-color: #000;
+  color: #fff;
+  padding: 10px 5px;
+}
+
+/* Body container styles */
+.body-container {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Add space between sections */
+}
+
+/* Body section styles */
+.body-section {
+  flex-grow: 1; /* Allow sections to grow to fill the container */
+  margin: 0 10px; /* Add some horizontal margin */
+}
+
+/* Horizontal line styles */
+.horizontal-line {
+  position: relative;
+  border-top: 5px solid #000; /* Adjust color as needed */
+  width: 100%; /* Set the width to 100% */
+  margin: 50px 0; /* Add some vertical margin */
+  bottom: 0;
+  animation: line-grow 2s ease-in-out forwards; /* Apply the animation */
+}
+
+
+/* HomePage.css */
+
+/* Define a keyframes animation */
+@keyframes line-grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Container styles */
+.container {
+  position: relative; /* Use relative positioning */
+  /* Other styles... */
+}
+
+
+/* HomePage.css */
+
+/* Vertical line styles */
+.vertical-line {
+  position: absolute; 
+  border-left: 1px solid #000; /* Adjust color as needed */
+  height: 100px; /* Set the height */
+  width: 2px; /* Set the width */
+  top: 0;
+}
+
+/* Additional styles for the second vertical line */
+.vertical-line-2 {
+  border-left: 2px solid #f00; /* Adjust color as needed */
+}
+
+/* Additional styles for the third vertical line */
+.vertical-line-3 {
+  border-left: 3px solid #0f0; /* Adjust color as needed */
+}

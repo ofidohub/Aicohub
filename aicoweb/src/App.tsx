@@ -8,19 +8,20 @@ import Home from './pages/HomePage';
 import User from './pages/UserPage';
 import NotFound from './pages/NotFoundPage';
 import NavList from './components/NavList';
+import HomePage from './pages/HomePage';
+
 
 const App: React.FC = () => {
     return (
         <div>
             <Router>
-                <NavList />
-                <Header />
+                <HomePage />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/user/:id" element={<User />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                <Footer />
+              
             </Router>
         </div>
     );

@@ -3,6 +3,7 @@ import React from 'react';
 import './Footer.css';
 import SocialMediaIcon from './SocialMediaIcon';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Newsletter from './Newsletter';
 
 const Footer: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Footer: React.FC = () => {
         <SocialMediaIcon icon={faTwitter} url="https://www.twitter.com/aicopolitics" />
         <SocialMediaIcon icon={faInstagram} url="https://www.instagram.com/aicopolitics" />
       </div>
+      <Newsletter />
     </footer>
   );
 };

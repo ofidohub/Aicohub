@@ -1,17 +1,17 @@
 /* Header.css */
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #000;
-  border: 2cqb solid #022D36; /* Adjusted border style */
-  border-radius: 5px;
-  padding: 5px; /* Added padding for better layout */
-  z-index: 2;
+  border: 1px solid #000;
+  padding: 0 20px; /* Added padding for better layout */
+  box-sizing: border-box;
+  
 }
 
 .header img {
-  width: 250px;
+  width: 200px;
   display: block;
   margin: 0 auto;
 }
@@ -34,7 +34,7 @@
 
 .logo-title {
   display: flex;
-  align-self: flex-start;
+  align-item: center;
   position: relative;
 }
 
