@@ -5,7 +5,7 @@ import './UserAccountButton.css';
 const UserAccountButton: React.FC = () => {
   return (
     <button className="user-account-button">
-  Account
+  Sigup/Signin
     </button>
   );
 };

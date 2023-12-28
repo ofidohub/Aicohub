@@ -1,0 +1,25 @@
+/* NavList.css */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000; /* This is the background color of the nav list */
+}
+
+.nav-item {
+  float: left;
+  padding: 10px; 
+  text-align: center;
+}
+
+
+/* This is the hover effect for the links in the nav list */
+.nav-item a:hover {
+  background-color: #42B3AE;
+}
+
+
+.nav-item.right {
+  float: right;
+}

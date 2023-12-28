@@ -7,6 +7,7 @@
   border: 2cqb solid #022D36; /* Adjusted border style */
   border-radius: 5px;
   padding: 5px; /* Added padding for better layout */
+  z-index: 2;
 }
 
 .header img {

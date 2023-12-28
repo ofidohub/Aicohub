@@ -1,0 +1,18 @@
+/* UserAccountButton.css */
+.user-account-button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* No border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 4px; /* Rounded corners */
+}
+.social-media-icon:hover {
+  /* Add your styles for the social media icon when hovered */
+  background-color: #ddd; /* Change the background color of the icon when hovered */
+}
