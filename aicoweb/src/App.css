@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+body {
+  background-color: #f0f0f0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px;
+}
+
+/* Add more styles as needed */
