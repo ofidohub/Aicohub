@@ -1,21 +1,33 @@
-/* NavList.css */
-.navbar {
-  top: 0;
-  height: 50px;
-  list-style-type: disc;
+nav {
+  background-color: #2C767A; /* Set the background color for the navigation bar */
+  padding: 3px; /* Add padding to the navigation bar */
+}
+
+nav ul {
+  list-style: none; /* Remove default list styles */
   padding: 0;
-  border-bottom: 2px solid #801; /* Replace with your desired color */
-    background: #2C767A; /* Replace with your desired color or image */
-    justify-content: space-between;
-  }
+  margin: 0;
+  display: flex;
+}
 
-  .nav-item {
-    color: #fff;
-    display: inline-block;
-    margin-right: 10px;
-  }
+nav ul li {
+  margin-right: 20px; /* Add spacing between navigation items */
+}
 
-  .navbar li {
-    display: inline;
-    margin: 0 10px 0 0;
-  }
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last navigation item */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color of the links */
+  padding: 8px 12px; /* Add padding to the links */
+  border-radius: 5px; /* Add border radius to the links */
+  background-color: bisque;
+  margin-right: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #fff; /* Add background color on hover */
+  color: #2C767A; /* Set text color on hover */
+}

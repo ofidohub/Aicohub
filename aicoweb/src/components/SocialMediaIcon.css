@@ -1,11 +1,25 @@
-.social-media-icon {
-    background-color: #f0f0f0; /* Replace with your desired color */
-    display: flex;
-  }
+.social-icons {
+  text-align: center;
+  margin-top: 20px;
+}
 
-  .icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #007bff;
+}
+
+.icon {
+  text-decoration: none;
+}

@@ -1,44 +1,37 @@
-/* Newsletter.css */
-/* Newsletter.css */
-.newsletter-container form {
+.newsletter-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="email"] {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.input-group {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
 }
 
-/* Newsletter.css */
-.newsletter-container {
-  /* ...existing styles... */
-  position: relative;
-  top: -30px;
-  /* Add the following line to move the newsletter to the right */
-float: right;
-}
-
-.newsletter-container form button {
-  background-color: #4CAF50; /* Green background */
-  border: none; /* No border */
-  color: white; /* White text */
-  padding: 15px 32px; /* Padding */
-  text-align: center; /* Centered text */
-  text-decoration: none; /* No underline */
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer; /* Pointer cursor on hover */
-  transition-duration: 0.4s; /* Transition effect */
-}
-
-.newsletter-container form button:hover {
-  background-color: #45a049; /* Darker green background on hover */
-  float: left;
-}
-
-/* Newsletter.css */
-.newsletter-container form input[type="email"] {
-  padding: 10px; /* Padding around text */
-  border: 1px solid #ccc; /* Gray border */
-  margin-right: 10px; /* Space between the input and the button */
-  flex-grow: 1; /* Take up remaining space */
-  border: 2px solid #000;
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
 }

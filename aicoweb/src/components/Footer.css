@@ -1,0 +1,50 @@
+/* Footer.css */
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2C767A;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+
+  /* Add these lines */
+  display: flex;
+  
+  align-items: center;
+}
+
+.newsletter-signup {
+  display: flex;
+  align-items: last baseline;
+}
+
+.newsletter-signup input {
+  padding: 10px;
+  margin-left: 20px; /* Add spacing between input and button */
+}
+
+.newsletter-signup button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Set button background color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.copyright {
+  margin-right: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  
+}
+.footer-links img {
+  width: 30px;
+  margin: 30px 10px;
+}
