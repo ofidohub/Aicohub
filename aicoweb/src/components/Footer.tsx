@@ -1,24 +1,17 @@
+
 // Footer.tsx
 import React from 'react';
 import SocialMediaIcon from './SocialMediaIcon';
 import Newsletter from './Newsletter';
-
+import './Footer.css'; // Import the CSS file
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <div className="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/terms">Terms of Use</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/faq">FAQ</a>
-        </div>
-        {/* Add more links as needed */}
-      <div className="newsletter">
+    <footer className="footer"> {/* Apply the 'footer' class */}
+      <div className="newsletter-signup">
         <Newsletter />
       </div>
-      <div className="copy-right">
+      <div className="copyright">
         <p> 2024 AicoHub right reserve</p>
       </div>
       <div className='footer-links'>

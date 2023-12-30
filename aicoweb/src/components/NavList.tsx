@@ -54,11 +54,12 @@ const NavList: React.FC = () => {
   );
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      {navLinks}
-      <DropdownMenu />
-      {routes}
-    </nav>
+ <nav>
+  {navLinks}
+  <div className="spacer" />
+  <DropdownMenu />
+ </nav>
+
   );
 };
 

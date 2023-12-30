@@ -1,7 +1,14 @@
 /* DropdownMenu.css */
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  background-color: darkslategray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 14p;
 }
 
 .dropbtn {
@@ -70,4 +77,5 @@ nav ul li a {
   right: 0;
   transform: translateY(-50%);
 }
+
 

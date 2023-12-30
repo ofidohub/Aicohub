@@ -31,9 +31,9 @@ const NavList = () => {
             React.createElement(NavLink, { to: "/science", className: location.pathname === "/science" ? "active" : "" }, "Science")),
         React.createElement("li", { className: "nav-item" },
             React.createElement(NavLink, { to: "/crypto-tech", className: location.pathname === "/crypto-tech" ? "active" : "" }, "Crypto Tech"))));
-    return (React.createElement("nav", { className: "navbar navbar-expand-lg navbar-light bg-light" },
+    return (React.createElement("nav", null,
         navLinks,
-        React.createElement(DropdownMenu, null),
-        routes));
+        React.createElement("div", { className: "spacer" }),
+        React.createElement(DropdownMenu, null)));
 };
 export { NavList };

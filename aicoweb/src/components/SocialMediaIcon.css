@@ -1,19 +1,12 @@
-.social-icons {
-  text-align: center;
-  margin-top: 20px;
-}
 
-.social-icons a {
+.social-media-icons a {
   display: inline-block;
   width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 5px;
   border-radius: 50%;
   background-color: #333;
   color: #fff;
-  font-size: 18px;
-  transition: all 0.3s;
+  font-size: 25px;
+  margin: 0 5px;
 }
 
 .social-icons a:hover {
