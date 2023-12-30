@@ -1,30 +1,26 @@
 // App.tsx
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/HomePage';
-import User from './pages/UserPage';
-import NotFound from './pages/NotFoundPage';
-import NavList from './components/NavList';
+import { BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 
+type IconName = 'facebook' | 'instagram' | 'twitter' | 'linkedin' | 'mastodon' | 'medium' | 'tiktok';
 
-const App: React.FC = () => {
-    return (
-        <div>
-            <Router>
-                <HomePage />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/user/:id" element={<User />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-              
-            </Router>
-        </div>
-    );
-};
+const socialMediaData: { icon: IconName; url: string; }[] = [
+  { icon: 'facebook', url: 'https://www.facebook.com' },
+  { icon: 'instagram', url: 'https://www.instagram.com' },
+  { icon: 'twitter', url: 'https://www.twitter.com' },
+  { icon: 'linkedin', url: 'https://www.linkedin.com' },
+  { icon: 'mastodon', url: 'https://mastodon.social' },
+  { icon: 'medium', url: 'https://medium.com' },
+  { icon: 'tiktok', url: 'https://www.tiktok.com' },
+];
+
+function App() {
+  return (
+    <Router>
+      <HomePage socialMediaData={socialMediaData} />
+    </Router>
+  );
+}
 
 export default App;

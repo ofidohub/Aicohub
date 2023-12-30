@@ -1,19 +1,33 @@
 // SocialMediaIcon.tsx
 import React from 'react';
-import './SocialMediaIcon.css';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faTwitter, faLinkedin, faMastodon,  faMedium, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import './SocialMediaIcon.css';
+
+const icons = {
+  facebook: faFacebook,
+  instagram: faInstagram,
+  twitter: faTwitter,
+  linkedin: faLinkedin,
+  mastodon: faMastodon,
+  medium: faMedium,
+  tiktok: faTiktok,
+};
+
+type IconName = keyof typeof icons;
 
 interface SocialMediaIconProps {
-  icon: IconDefinition;
+  icon: IconName;
   url: string;
 }
 
 const SocialMediaIcon: React.FC<SocialMediaIconProps> = ({ icon, url }) => {
   return (
-    <a href={url} className="social-media-icon">
-      <FontAwesomeIcon icon={icon} />
+    <div className="icon-container">
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={icons[icon]} />
     </a>
+    </div>
   );
 };
 

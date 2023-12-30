@@ -14,10 +14,10 @@ const Header: React.FC = () => {
      
       <div className="spacer" />
       <nav>
-      <li>
+     
       <Search />
-        <DropdownMenu />
-      </li>
+       
+    
       </nav>
    
     </header>

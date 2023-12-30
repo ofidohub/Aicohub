@@ -1,3 +1,11 @@
 .social-media-icon {
     background-color: #f0f0f0; /* Replace with your desired color */
+    display: flex;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }

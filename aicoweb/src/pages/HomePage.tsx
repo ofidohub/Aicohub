@@ -1,33 +1,32 @@
-// Home.tsx
+// HomePage.tsx
 import React from 'react';
-import './HomePage.css';
-import NavList from '../components/NavList'; // Adjust the path according to your project structure
-import Header from '../components/Header'; // Adjust the path according to your project structure
-import Footer from '../components/Footer'; // Adjust the path according to your project structure
+import SocialMediaIcon from '../components/SocialMediaIcon';
+import { NavList } from '../components/NavList';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-const HomePage: React.FC = () => {
+type IconName = 'facebook' | 'instagram' | 'twitter' | 'linkedin' | 'mastodon' | 'medium' | 'tiktok';
+
+interface SocialMediaData {
+  icon: IconName;
+  url: string;
+}
+
+interface HomePageProps {
+  socialMediaData: SocialMediaData[];
+}
+
+const HomePage: React.FC<HomePageProps> = ({ socialMediaData }) => {
   return (
-    <div className="homepage">
-      <header>
+    <div>
+      <nav>
+        <Header />
+        {socialMediaData.map((data, index) => (
+          <SocialMediaIcon key={index} icon={data.icon} url={data.url} />
+        ))}
         <NavList />
-        <Header /> {/* Removed className="" */}
-      </header>
-      <div className="horizontal-line"></div> {/* This is the horizontal line */}
-      
-      <div className="body-container">
-        <section className="body-section">
-          {/* Content for the first section */}
-        </section>
-        <section className="body-section">
-          {/* Content for the second section */}
-        </section>
-        <section className="body-section">
-          {/* Content for the third section */}
-        </section>
-      </div>
-      <footer className="footer">
         <Footer />
-      </footer>
+      </nav>
     </div>
   );
 };
