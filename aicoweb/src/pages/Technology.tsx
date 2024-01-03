@@ -1,9 +1,16 @@
-// BusinessPage.tsx
-import React from 'react';
+import TechnologyHeader from './components/TechnologyHeader';
+import TechnologyFooter from './components/TechnologyFooter';
 
-const Technology: React.FC = () => {
-  return <h1>Business Page</h1>;
-};
+function TechnologyPage() {
+  return (
+    <div>
+      <TechnologyHeader />
+      <main>
+        {/* Your page content */}
+      </main>
+      <TechnologyFooter />
+    </div>
+  );
+}
 
-export default Technology;
-
+export default TechnologyPage;

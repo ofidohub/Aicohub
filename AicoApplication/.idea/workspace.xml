@@ -19,6 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/aicohub/App.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/aicohub/package.json" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/aicohub/tsconfig.json" root0="SKIP_INSPECTION" />
   </component>
